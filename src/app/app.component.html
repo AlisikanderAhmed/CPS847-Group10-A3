@@ -25,19 +25,52 @@
     </div>
   </nav>
 
-  <div class="container-fluid jumbotron">
-    <h1 class=text-center>About Us</h1>
-    <div class="container-fluid">
-      <p>You are in {{location}}</p>
-      <p>Weather: {{weather}}</p>
-      <p>The Temperature is: {{temperature_string}}</p>
-      <p>Feels Like: {{feelslike}}c</p>
-      <p>For Full Forecast: <a href="{{forecast_url}}">Click Here</a></p>
+  <div class="container-fluid" style="padding-top: 50px; padding-bottom: 100px">
+    <div class="container-fluid text-center">
+      <h1>About Us</h1>
+      <hr class="bg-primary">
+      <p> MyCompany Inc. is an IT consulting company in downtown Toronto.</p>
     </div>
+
+    <div class="container-fluid text-center" style="padding-top: 25px">
+      <h1>Weather</h1>
+      <hr class="bg-primary">
+      <p>Location: {{location}}</p>
+      <p>Weather: {{weather}} <img src={{icon_url}}> </p>
+      <p>Current Temperature: {{temperature_string}}</p>
+      <p>Feels Like: {{feelslike}}c</p>
+      <hr style="margin:0px 500px 10px 500px">
+      <p>For the Full Forecast: <a href="{{forecast_url}}">Click Here</a></p>
+      <p>{{observation_time}}</p>
+    </div>
+
+    <div class="container-fluid text-center"  style="padding-top: 25px">
+      <h1>Our Services</h1>
+      <hr class="bg-primary">
+      <ul>
+        <li>Advertising</li>
+        <li>Consulting</li>
+        <li>Marketing Campaigns</li>
+        <li>Graphic's Design</li>
+        <li>And Much More...</li>
+      </ul>
+    </div>
+
+    <div class="container-fluid text-center"  style="padding-top: 25px">
+      <h1 class=text-center>Our Customers</h1>
+      <hr class="bg-primary">
+      <ul>
+        <li>Mircosoft</li>
+        <li>Instagram</li>
+        <li>FaceBook</li>
+        <li>RBC</li>
+        <li>And Many More...</li>
+      </ul>
+    </div>
+
   </div>
-  <hr class="hr">
-  <footer class="footer" id="footer">
-      <span class="text-muted"> © 2018. All Rights Reversed | </span> <span class="text-muted font-weight-bold"> <app-date-pipe></app-date-pipe> </span>
+  <footer class="footer bg-primary" id="footer">
+      <span> © 2018. All Rights Reversed | </span> <span class="font-weight-bold"> <app-date-pipe></app-date-pipe> </span>
   </footer>
 
 </body>

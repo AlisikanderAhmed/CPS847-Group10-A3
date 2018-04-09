@@ -13,7 +13,9 @@ export class AppComponent {
   weather: string;
   forecast_url: string;
   temperature_string: string;
-  feelslike: number;
+  feelslike: string;
+  observation_time: string;
+  icon_url: string;
 
   constructor (private newService: OurHttpService) {}
 
@@ -23,11 +25,9 @@ export class AppComponent {
       this.forecast_url = response.current_observation.forecast_url;
       this.temperature_string = response.current_observation.temperature_string;
       this.weather = response.current_observation.weather;
-      this.feelslike = response.current_observation.feelslike_c;
-
-      console.log(this.forecast_url);
+      this.feelslike = response.current_observation.feelslike_string;
+      this.observation_time = response.current_observation.observation_time;
+      this.icon_url = response.current_observation.icon_url;
     });
   }
 }
-
-//current_observation.observation_location.full
