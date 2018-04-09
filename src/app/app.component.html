@@ -13,20 +13,20 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">About Us<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#about">About Us<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Our Services</a>
+          <a class="nav-link" href="#services">Our Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Our Customers</a>
+          <a class="nav-link" href="#customers">Our Customers</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid" style="padding-top: 50px; padding-bottom: 100px">
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center" id="about">
       <h1>About Us</h1>
       <hr class="bg-primary">
       <p> MyCompany Inc. is an IT consulting company in downtown Toronto.</p>
@@ -35,16 +35,18 @@
     <div class="container-fluid text-center" style="padding-top: 25px">
       <h1>Weather</h1>
       <hr class="bg-primary">
-      <p>Location: {{location}}</p>
-      <p>Weather: {{weather}} <img src={{icon_url}}> </p>
-      <p>Current Temperature: {{temperature_string}}</p>
-      <p>Feels Like: {{feelslike}}c</p>
+      <p><span class=font-weight-bold>Location:</span> <span>  {{location}} </span> </p>
       <hr style="margin:0px 500px 10px 500px">
-      <p>For the Full Forecast: <a href="{{forecast_url}}">Click Here</a></p>
-      <p>{{observation_time}}</p>
+      <p><span class=font-weight-bold>Weather:</span> <span>  {{weather}} <img src={{icon_url}}> </span> </p>
+
+      <p><span class=font-weight-bold>Current Temperature:</span> <span>  {{temperature_string}} </span> </p>
+      <p><span class=font-weight-bold>Feels Like:</span> <span>  {{feelslike}} </span> </p>
+      <hr style="margin:0px 500px 10px 500px">
+      <p>      <span class=font-weight-bold>For the Full Forecast: </span> <a href="{{forecast_url}}">Click Here</a> </p>
+      <p class="font-weight-light">{{observation_time}}</p>
     </div>
 
-    <div class="container-fluid text-center"  style="padding-top: 25px">
+    <div class="container-fluid text-center"  style="padding-top: 25px" id="services">
       <h1>Our Services</h1>
       <hr class="bg-primary">
       <ul>
@@ -56,7 +58,7 @@
       </ul>
     </div>
 
-    <div class="container-fluid text-center"  style="padding-top: 25px">
+    <div class="container-fluid text-center"  style="padding-top: 25px" id="customers">
       <h1 class=text-center>Our Customers</h1>
       <hr class="bg-primary">
       <ul>
