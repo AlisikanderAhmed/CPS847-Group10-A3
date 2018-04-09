@@ -8,4 +8,4 @@ o Provide URL of your Django app (based on the deployment instructions)
 
 **----------------------------------------------Angular Demo----------------------------------------------**
 
-![Alt text](https://github.com/AlisikanderAhmed/CPS847-Group10-A3/tree/master/Images/AngularDemo.jpg)
+![Alt text](https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Images/AngularDemo.jpg)
