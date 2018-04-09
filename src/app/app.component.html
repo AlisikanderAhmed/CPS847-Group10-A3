@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded">
+    <a class="navbar-brand" href="#">MyCompany Inc.</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">About Us<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Our Customers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid jumbotron">
+    <h1 class=text-center>About Us</h1>
+    <div class="container-fluid">
+      <p>You are in {{location}}</p>
+      <p>Weather: {{weather}}</p>
+      <p>The Temperature is: {{temperature_string}}</p>
+      <p>Feels Like: {{feelslike}}c</p>
+      <p>For Full Forecast: <a href="{{forecast_url}}">Click Here</a></p>
+    </div>
+  </div>
+  <hr class="hr">
+  <footer class="footer" id="footer">
+      <span class="text-muted"> © 2018. All Rights Reversed | </span> <span class="text-muted font-weight-bold"> <app-date-pipe></app-date-pipe> </span>
+  </footer>
+
+</body>
+</html>
