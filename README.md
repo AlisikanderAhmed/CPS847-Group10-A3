@@ -12,6 +12,6 @@
 
 **----------------------------------------------Angular Demo----------------------------------------------**
 
-![Alt text](https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Images/AngularDemo.jpg)
+![Alt text](https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Angular_A3/Images/AngularDemo.jpg)
 
 **----------------------------------------------Django Demo----------------------------------------------**
