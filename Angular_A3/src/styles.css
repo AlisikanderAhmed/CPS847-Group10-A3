@@ -36,14 +36,6 @@ p,span{
    display: none;
 }
 
-#weather{
-  padding:50px 50px 50px 75px;
-}
-
-#card{
-  padding: 20px;
-}
-
 #cardFooter{
   padding-top: 20px;
 }
