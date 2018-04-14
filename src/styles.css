@@ -13,3 +13,82 @@ ul{
   text-align: left;
   display: inline-block;
 }
+
+h1{
+  text-align: center;
+}
+
+p,span{
+  font: 200 18px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.border-between > [class*='col-']:before {
+   background: #e3e3e3;
+   bottom: 0;
+   content: " ";
+   left: 0;
+   position: absolute;
+   width: 5px;
+   top: 0;
+}
+
+.border-between > [class*='col-']:first-child:before {
+   display: none;
+}
+
+#weather{
+  padding:50px 50px 50px 75px;
+}
+
+#card{
+  padding: 20px;
+}
+
+#cardFooter{
+  padding-top: 20px;
+}
+
+.div{
+  margin: 0;
+  padding: 0;
+  width: 300px;
+}
+
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+.li:last-child {
+  border: none;
+}
+
+.a {
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+  display: block;
+  width: 300;
+}
+
+.a:hover {
+  font-size: 30px;
+  background: #f6f6f6;
+}
+
+#wu_img{
+  position: absolute;
+  padding-bottom: 3px;
+}

@@ -1,12 +1,13 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary rounded">
-    <a class="navbar-brand" href="#">MyCompany Inc.</a>
+    <a class="navbar-brand" href="#">MyCompany Inc. <img src="assets/company.png" width="65px" height="30px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,61 +20,100 @@
           <a class="nav-link" href="#services">Our Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#customers">Our Customers</a>
+          <a class="nav-link" href="#customers">Our Partners</a>
         </li>
       </ul>
     </div>
   </nav>
 
   <div class="container-fluid" style="padding-top: 50px; padding-bottom: 100px">
-    <div class="container-fluid text-center" id="about">
-      <h1>About Us</h1>
-      <hr class="bg-primary">
-      <p> MyCompany Inc. is an IT consulting company in downtown Toronto.</p>
+
+    <div class="row border-between">
+      <div class="col-4 text-center" id="weather">
+        <div class="card" style="width: 25rem;">
+
+          <div class="card-header bg-primary text-white">
+            <h1 class=text-center>Weather</h1>
+          </div>
+
+          <div class="card-body">
+            <p><span class=font-weight-bold>Location:</span> <span>  {{location}} </span> </p>
+            <p><span class=font-weight-bold>Weather:</span> <span>  {{weather}} <img src={{icon_url}}> </span> </p>
+
+            <p><span class=font-weight-bold>Current Temperature:</span> <span>  {{temperature_string}} </span> </p>
+            <p><span class=font-weight-bold>Feels Like:</span> <span>  {{feelslike}} </span> </p>
+            <p><span class=font-weight-bold>Precipitation:</span> <span>  {{precip_today_string}} </span> </p>
+            <p><span class=font-weight-bold>Wind:</span> <span>  {{wind_string}} </span> </p>
+            <p><span class=font-weight-bold>Humidity:</span> <span>  {{relative_humidity}} </span> </p>
+
+            <a class="btn btn-primary" href="{{forecast_url}}">Check Out the Full Forecast</a>
+          </div>
+
+          <div class="card-footer bg-primary text-white" id = "cardFooter">
+            {{observation_time}}
+            <p><span>Weather Provided By: </span> <span> <img src={{wu_icon}} width=50 height=25 id="wu_img"> </span> </p>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="col-8">
+
+        <div class="container-fluid text-left" id="about">
+          <h1>About Us</h1>
+          <hr class="bg-primary">
+          <p> MyCompany Inc. is an IT consulting company in downtown Toronto. We specialize in the design, implementation, security, and support of IT infrastructure, cloud and networking systems.</p>
+        </div>
+
+
+        <div class="container-fluid text-center" style="padding-top: 25px" id="services">
+          <h1>Our Services</h1>
+          <hr class="bg-primary">
+          <ul class="ul">
+            <div class="li div">
+              <li><a class="a">Advertising</a></li>
+              <li><a class="a">Consulting</a></li>
+              <li><a class="a">Marketing Campaigns</a></li>
+              <li><a class="a">Graphic's Design</a></li>
+              <li><a class="a">IT infrastructure</a></li>
+              <li><a class="a">And Much More...</a></li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="container-fluid text-center" style="padding-top: 25px" id="customers">
+          <h1>Our Partners</h1>
+          <hr class="bg-primary">
+          <div class="row">
+            <div class="col"><img src="assets/partner1.png"></div>
+            <div class="col"><img src="assets/partner2.png"></div>
+            <div class="col"><img src="assets/partner3.png"></div>
+            <div class="col"><img src="assets/partner4.png"></div>
+          </div>
+          <div class="row">
+            <div class="col"><img src="assets/partner5.png"></div>
+            <div class="col"><img src="assets/partner6.png"></div>
+            <div class="col"><img src="assets/partner7.png"></div>
+            <div class="col"><img src="assets/partner8.png"></div>
+          </div>
+
+          <div class="row">
+            <div class="col"><img src="assets/partner9.png"></div>
+            <div class="col"><img src="assets/partner10.png"></div>
+            <div class="col"><img src="assets/partner11.png"></div>
+            <div class="col"><img src="assets/partner12.png"></div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-
-    <div class="container-fluid text-center" style="padding-top: 25px">
-      <h1>Weather</h1>
-      <hr class="bg-primary">
-      <p><span class=font-weight-bold>Location:</span> <span>  {{location}} </span> </p>
-      <hr style="margin:0px 500px 10px 500px">
-      <p><span class=font-weight-bold>Weather:</span> <span>  {{weather}} <img src={{icon_url}}> </span> </p>
-
-      <p><span class=font-weight-bold>Current Temperature:</span> <span>  {{temperature_string}} </span> </p>
-      <p><span class=font-weight-bold>Feels Like:</span> <span>  {{feelslike}} </span> </p>
-      <hr style="margin:0px 500px 10px 500px">
-      <p>      <span class=font-weight-bold>For the Full Forecast: </span> <a href="{{forecast_url}}">Click Here</a> </p>
-      <p class="font-weight-light">{{observation_time}}</p>
-    </div>
-
-    <div class="container-fluid text-center"  style="padding-top: 25px" id="services">
-      <h1>Our Services</h1>
-      <hr class="bg-primary">
-      <ul>
-        <li>Advertising</li>
-        <li>Consulting</li>
-        <li>Marketing Campaigns</li>
-        <li>Graphic's Design</li>
-        <li>And Much More...</li>
-      </ul>
-    </div>
-
-    <div class="container-fluid text-center"  style="padding-top: 25px" id="customers">
-      <h1 class=text-center>Our Customers</h1>
-      <hr class="bg-primary">
-      <ul>
-        <li>Mircosoft</li>
-        <li>Instagram</li>
-        <li>FaceBook</li>
-        <li>RBC</li>
-        <li>And Many More...</li>
-      </ul>
-    </div>
-
   </div>
+
   <footer class="footer bg-primary" id="footer">
-      <span> © 2018. All Rights Reversed | </span> <span class="font-weight-bold"> <app-date-pipe></app-date-pipe> </span>
+    <span> © 2018. All Rights Reversed | </span> <span class="font-weight-bold"> <app-date-pipe></app-date-pipe> </span>
   </footer>
 
 </body>
+
 </html>

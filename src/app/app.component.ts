@@ -16,7 +16,11 @@ export class AppComponent {
   feelslike: string;
   observation_time: string;
   icon_url: string;
-
+  wu_icon: string;
+  wind_string: string;
+  precip_today_string: string;
+  relative_humidity: string;
+  
   constructor (private newService: OurHttpService) {}
 
   ngOnInit(){
@@ -28,6 +32,11 @@ export class AppComponent {
       this.feelslike = response.current_observation.feelslike_string;
       this.observation_time = response.current_observation.observation_time;
       this.icon_url = response.current_observation.icon_url;
+      this.wu_icon = response.current_observation.image.url;
+      this.wind_string = response.current_observation.wind_string;
+      this.precip_today_string = response.current_observation.precip_today_string;
+      this.relative_humidity = response.current_observation.relative_humidity;
+
     });
   }
 }
