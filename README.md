@@ -18,3 +18,5 @@
 ![Alt text](https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Angular_A3/Images/AngularDemo.jpg)
 
 **----------------------------------------------Django Demo----------------------------------------------**
+
+<a href="https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Django_A3/Images/DjangoDemo.gif"><img src="https://github.com/AlisikanderAhmed/CPS847-Group10-A3/blob/master/Django_A3/Images/DjangoDemo.gif"></a>
