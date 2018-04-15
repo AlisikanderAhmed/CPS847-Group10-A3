@@ -10,8 +10,8 @@
     - Password: notpassword
 
 ## Pending
-- Provide URL of your Angular app (based on the deployment instructions)
-- Provide URL of your Django app (based on the deployment instructions)
+- URL of Angular app : http://141.117.231.223:4200/
+- URL of Django app : 
 
 **----------------------------------------------Angular Demo----------------------------------------------**
 
