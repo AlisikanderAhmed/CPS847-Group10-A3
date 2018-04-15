@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% block main_content%}
+
+{% if lastest_questions %}
+  <div class="question"><h1>Available Questions</h1><hr></div>
+  <div class="div">
+  <ul>
+    {% for question in lastest_questions %}
+      <li><a href = {% url "detail" question.id %}> {{question.question_text}} &nbsp;|&nbsp; Created By: {{question.owner}} </a></li>
+    {% endfor %}
+  </ul>
+</div>
+{% else %}
+  <h1> No questions in the database, Please add some Questions!</h1>
+{% endif %}
+
+{% endblock %}

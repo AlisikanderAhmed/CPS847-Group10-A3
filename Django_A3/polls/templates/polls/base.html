@@ -1,0 +1,27 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>CPS853 Poll App</title>
+    <link rel="stylesheet" type="text/css" href = "{% static 'polls/bootstrap-4.0.0-dist/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href = "{% static 'polls/style.css' %}" />
+  </head>
+
+  <body>
+  <div class="container-fluid header">
+    <h1 style="padding-left:150px;">My Company Inc. Polling App<img src="{% static 'polls/company.png' %}"  width="65px" height="30px">
+      <form action = "{% url "index" %}" class="Back">
+        <input type="submit" value="&laquo; Home" class="button">
+      </form>
+    </h1>
+    <hr>
+  </div>
+
+  {% block main_content %}
+  {% endblock %}
+
+  </body>
+</html>
