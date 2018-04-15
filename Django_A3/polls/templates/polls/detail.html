@@ -1,18 +1,18 @@
 {% extends 'polls/base.html' %}
 {% block main_content%}
 
-<div class="q1"><h1> Choices for "{{question.question_text}}" are: "</h1><hr></div>
+<div class="contatiner-fluid"><h1> Choices for "{{question.question_text}}" are: </h1><hr class="q1"></div>
 
 {% if error_message %} <h1>{{error_message}}</h1> {% endif %}
 
-<div class="radiodiv">
+<div class="contatiner-fluid radiodiv mx-auto">
 <form action = "{% url 'vote' question.id %}" method="post">
   {% csrf_token %}
   {% for choice in question.choice_set.all %}
     <input type="radio" name="choice" id="choice{{forloop.counter}}" value ="{{choice.id}}">
     <label for="choice{{forloop.counter}}"> {{choice.choice_text}} </label> <br>
   {% endfor %}
-  <input type="submit" value="Vote" class="button">
+  <input type="submit" value="Vote" class="btn btn-primary" style="margin-top:15px;margin-left:10px">
 </form>
 </div>
 

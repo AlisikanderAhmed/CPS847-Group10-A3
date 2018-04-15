@@ -1,18 +1,19 @@
 {% extends 'polls/base.html' %}
 {% block main_content%}
 
-<div class="question"><h1> Results for "{{question.question_text}}"</h1><hr></div>
+<div class="contatiner-fluid"><h1> Results for "{{question.question_text}}"</h1><hr class="q1"></div>
 
-<div class="div">
+<div class="contatiner-fluid div">
   <ul>
     {% for choice in question.choice_set.all %}
       <li>{{choice.choice_text}} -- {{choice.votes}} Vote{{ choice.votes|pluralize}}</li>
     {% endfor %}
-  </ul><hr>
+  </ul>
+  <form action = "{%url 'detail' question.id %}" style="text-align:center;">
+    <input type="submit" value="Vote Again" class="btn btn-primary">
+  </form>
 </div>
 
-<form action = "{%url 'detail' question.id %}" style="text-align:center;">
-  <input type="submit" value="Vote Again" class="button">
-</form>
+
 
 {% endblock %}
