@@ -9,7 +9,7 @@
     - Username: admin
     - Password: notpassword
 
-## Things We still need to do
+## Pending
 - Provide URL of your Angular app (based on the deployment instructions)
 - Provide URL of your Django app (based on the deployment instructions)
 
